@@ -29,7 +29,7 @@ fun Source.getNameForMangaInfo(
     val isInEnabledLanguages = lang in enabledLanguages
     return when {
         // SY -->
-        !mergeSources.isNullOrEmpty() -> getMergedSourcesString(
+        mergeSources != null -> getMergedSourcesString(
             application,
             mergeSources,
             enabledLanguages,
