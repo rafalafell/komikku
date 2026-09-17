@@ -92,7 +92,7 @@ private fun getMergedSourcesString(
     // KMK --> Use the empty-state label when filtering removes every real source,
     // otherwise use the localized format string so RTL languages can reorder the
     // label and the sources as needed.
-    return if (sourceNames.isBlank()) {
+    return if (realSources.isEmpty()) {
         context.stringResource(MR.strings.label_merged_entry)
     } else {
         context.stringResource(MR.strings.label_merged_entry_with_sources, sourceNames)
